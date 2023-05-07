@@ -1,5 +1,9 @@
 package _00_Intro_to_Exceptions;
 
+import javax.swing.JOptionPane;
+
+import org.junit.platform.commons.function.Try;
+
 public class ExceptionsDemo {
 
     /*
@@ -40,6 +44,12 @@ public class ExceptionsDemo {
 
         // 1. Create a try/catch block (Hint: type "try" and ctrl + space).
 
+    	try {
+			testFiveOrGreater(4);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    }	
         /*
          * 2. Call the testFiveOrGreater method with a value less than 5 inside
          * the try block.
@@ -53,8 +63,29 @@ public class ExceptionsDemo {
 
         // 4. Run the program. Did the stack trace print out?
 
-    }
-
+    
+//___________________________________________________________________________________________
+    
+public class NegativeNumberException extends Exception{
+	public void scaryPopup() {
+		JOptionPane.showMessageDialog(null, "Broken Computer!");
+	}
+	
+	public void testPositive(int x) throws Exception{
+		if(x<0) {
+			throw new Exception();
+		}
+	}
+	
+	try {
+		testPositive(-1);
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	
+		
+	
+}
     /*
      * 5. Create your own exception by making a new class called
      * NegativeNumberException that extends Exception.
