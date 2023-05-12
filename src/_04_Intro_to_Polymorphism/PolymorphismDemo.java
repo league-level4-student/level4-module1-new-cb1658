@@ -46,15 +46,18 @@ public class PolymorphismDemo {
          * declared as an Animal on the left side.
          */
 
-        Animal animal = new Animal();
+        Animal animal = new Bird();
 
         /*
          * 2. Call the speak method and run the program.
          * 
          * Even though the variable was declared as an Animal, at run time it
          * will behave like whatever Animal subclass it was instantiated as.
+         * 
+         *
          */
 
+        animal.speak();
         /*
          * 3. Comment out the speak method of the Animal subclass you chose and
          * run the program again.
@@ -62,6 +65,8 @@ public class PolymorphismDemo {
          * This time since there was no speak method in the Animal subclass you
          * chose, the next closest speak method in the class's inheritance was
          * called. In this case it was Animal class's version of speak.
+         * 
+         * After commenting out, the print was: I am an animal
          */
 
         /*

@@ -66,26 +66,8 @@ public class ExceptionsDemo {
     
 //___________________________________________________________________________________________
     
-public class NegativeNumberException extends Exception{
-	public void scaryPopup() {
-		JOptionPane.showMessageDialog(null, "Broken Computer!");
-	}
-	
-	public void testPositive(int x) throws Exception{
-		if(x<0) {
-			throw new Exception();
-		}
-	}
-	
-	try {
-		testPositive(-1);
-	}catch(Exception e){
-		e.printStackTrace();
-	}
-	
-		
-	
-}
+    
+
     /*
      * 5. Create your own exception by making a new class called
      * NegativeNumberException that extends Exception.
@@ -130,4 +112,6 @@ public class NegativeNumberException extends Exception{
      * 13. Try running the program with values that both throw and don't throw
      * exceptions.
      */
+    
 }
+
