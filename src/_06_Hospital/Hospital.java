@@ -22,8 +22,12 @@ public class Hospital {
 		return patientList;
 	}
 	
-	public void assignPatientsToDoctors() {
-		// COMPLETE THIS
+	public void assignPatientsToDoctors() throws DoctorFullException {
+		
+		for(int i = 0; i < patientList.size(); i++) {
+			doctorList.get(i % doctorList.size()).assignPatient(patientList.get(i));
+		}
+		
 	}
 	
 	

@@ -122,6 +122,8 @@ public class HospitalTest extends TestCase {
     	testHospital.addPatient(new Patient());
     	testHospital.addPatient(new Patient());
     	
+    	
+    	
         testHospital.assignPatientsToDoctors();
 
         List<Doctor> testDoctors = testHospital.getDoctors();
